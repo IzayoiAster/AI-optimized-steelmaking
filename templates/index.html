@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aster's AI Rate Calculator</title>
+</head>
+<body>
+
+<div class="app">
+    <div class="container">
+
+        <h2>钢铁冶炼综合成材率在线计算</h2>
+
+        <div class="form">
+            <form action="/calc" method="post">
+
+                <div class="border">
+                    <div class="input">
+                        <div class="para-name">成锭率参数</div>
+                        <input type="text" name="i1" placeholder="钢锭规格">
+                        <input type="text" name="i2" placeholder="废钢投入量">
+                        <input type="text" name="i3" placeholder="返回合金钢"><br>
+                        <input type="text" name="i4" placeholder="碳素钢">
+                        <input type="text" name="i5" placeholder="表面质量：结疤">
+                        <input type="text" name="i6" placeholder="钢锭表面：短尺"><br>
+                        <input type="text" name="i7" placeholder="钢锭表面：白点">
+                        <input type="text" name="i8" placeholder="钢锭表面：其他">
+                        <input type="text" name="i9" placeholder="化学成分：Mo"><br>
+                        <input type="text" name="i10" placeholder="化学成分：Ni">
+                        <input type="text" name="i11" placeholder="化学成分：Cr">
+                        <input type="text" name="i12" placeholder="化学成分：Mn"><br>
+                        <input type="text" name="i13" placeholder="化学成分：C">
+                        <input type="text" name="i14" placeholder="化学成分：Si">
+                    </div>
+                </div>
+
+                <div class="border">
+                    <div class="input">
+                        <div class="para-name">成材率参数</div>
+                        <input type="text" name="p1" placeholder="成材组距">
+                        <input type="text" name="p2" placeholder="检验允许的偏差范围">
+                        <input type="text" name="p3" placeholder="检验项目：非金属夹杂物"><br>
+                        <input type="text" name="p4" placeholder="检验项目：显微组织">
+                        <input type="text" name="p5" placeholder="检验项目：力学性能">
+                        <input type="text" name="p6" placeholder="检验项目：低倍组织">
+                    </div>
+                </div>
+
+                <input class="button" type="submit" value="计算">
+            </form>
+        </div>
+
+        <h3>综合成材率为： {{result}}</h3>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+<style>
+    .app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .border {
+        border: 2px solid gray;
+        border-radius: 8px;
+        margin-top: 30px;
+        width: fit-content;
+    }
+
+    .input {
+        margin: 12px;
+    }
+
+    .para-name {
+        margin: 12px;
+    }
+
+    .button {
+        width: 80px;
+        height: 32px;
+        margin: 40px;
+        border: 1px solid dodgerblue;
+        border-radius: 8px;
+        background-color: dodgerblue;
+        color: white;
+    }
+</style>
